@@ -1,0 +1,9 @@
+{
+    "name": "phptheme/html-helper",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpTheme\\HtmlHelper\\" : ""
+        }
+    }
+}
