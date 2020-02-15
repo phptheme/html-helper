@@ -42,6 +42,11 @@ class HtmlHelper
         {
             $string = trim($string);
 
+            if (!$string)
+            {
+                continue;
+            }
+
             list($key, $value) = explode(':', $string);
 
             $return[$key] = trim($value);
