@@ -40,9 +40,11 @@ class HtmlHelper
 
         foreach($strings as $string)
         {
+            $string = trim($string);
+
             list($key, $value) = explode(':', $string);
 
-            $return[$key] = $value;
+            $return[$key] = trim($value);
         }
 
         return $return;
@@ -54,10 +56,10 @@ class HtmlHelper
 
         foreach($style as $key => $value)
         {
-            $strings[] = $key . ':' . $value;
+            $strings[] = $key . ': ' . $value;
         }
 
-        return implode(';', $strings);
+        return implode('; ', $strings);
     }
 
     public static function mergeStyle($style1, $style2)
