@@ -2,10 +2,8 @@
 /**
  * @author PhpTheme Dev Team <dev@getphptheme.com>
  * @license MIT
- * @link http://getphptheme.com
+ * @link https://getphptheme.com
  */
-namespace PhpTheme\HtmlHelper\Tests;
-
 use PhpTheme\HtmlHelper\HtmlHelper;
 
 class HtmlHelperTest extends \PHPUnit\Framework\TestCase
