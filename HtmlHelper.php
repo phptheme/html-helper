@@ -2,12 +2,22 @@
 /**
  * @author PhpTheme Dev Team <dev@getphptheme.com>
  * @license MIT
- * @link http://getphptheme.com
+ * @link https://getphptheme.com
  */
 namespace PhpTheme\HtmlHelper;
 
 class HtmlHelper
 {
+
+    public static function addClass(array $attributes, string $class)
+    {
+        $attributes['class'] = static::mergeClass(
+            array_key_exists('class', $attributes) ? $attributes['class'] : [], 
+            (array) $class
+        );
+
+        return $attributes;
+    }
 
     public static function mergeClass($class1, $class2)
     {
