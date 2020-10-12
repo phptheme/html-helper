@@ -11,12 +11,12 @@ class HtmlHelper
 
     public static function addClass(array $attributes, string $class)
     {
-        $attributes['class'] = static::mergeClass(
-            array_key_exists('class', $attributes) ? $attributes['class'] : [], 
-            (array) $class
-        );
-
-        return $attributes;
+        return HtmlHelper::mergeAttributes($attributes, [
+            'class' => static::mergeClass(
+                array_key_exists('class', $attributes) ? $attributes['class'] : [], 
+                (array) $class
+            )
+        ]);
     }
 
     public static function mergeClass($class1, $class2)
